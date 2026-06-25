@@ -1,0 +1,49 @@
+<!-- Jesus Briseno - 06/22/2026 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My JS Quiz Game</title>
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+    <h1>My Quiz Game</h1>
+    <h3>Open the Console (F12) to see detailed results.</h3>
+
+    <h4>Questions</h4>
+    <ol>
+        <li>Name a real-life situation where you would need to use an `if` statement.</li>
+        <li>
+            A real-life situation where you would need to use an 'if' statement is when checking/validating user input in 
+            a form. For example, you would use an if statement to check someone's answer for a quiz. If their answer is 
+            right, increase their score. Otherwise, do nothing.
+        </li>
+
+        <li>Explain the difference between `==` and `===`. Why is strict equality usually better?</li>
+        <li>
+            Using '==' checks for loose equality while '===' checks for strict equality. Strict equality is usually better 
+            because it checks both the value AND data type. It allows us to have more control over what we're checking, 
+            since checking for loose equality could result in behavior that may not be obvious in your code, such as 
+            implicit type conversion.
+        </li>
+
+        <li>Give an example (in your own words) of when you would use `&&` (AND) vs `||` (OR).</li>
+        <li>
+            You want to use '&&' when you need BOTH things to be true. For example, when checking to see if a user can vote, 
+            you want to check that they are over 18 AND registered to vote. Both must be true, otherwise they cannot vote. 
+            A real world example of when you would want to use '||' is when checking if a child can ride a rollercoaster. 
+            In most cases children must either be a certain height OR be accompanied by an adult. As long as either is true, 
+            the child can ride the rollercoaster.
+        </li>
+
+        <li>What does the `!` (NOT) operator do? Give an example of a situation you would use it.</li>
+        <li>
+            The '!' operator inverses whatever it precedes, so a truthy value becomes false and a falsy value becomes true. 
+            An example of when you would want to use it is when checking for a winner in a game loop. Oftentimes in simple 
+            programming games, the programmer uses a 'winner' variable in a while loop to continue until there is a winner. 
+            It loops while 'winner' is false (!winner), and continues until the winning condition is met and 'winner' is set 
+            to true.
+        </li>
+    </ol>
+</body>
+</html>
