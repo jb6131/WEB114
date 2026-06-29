@@ -7,12 +7,12 @@
 
 1. Initialize score = 0
 
-2. Question 1: What is my dead brother's name?
-    - Variable name: deadBrother
-    - Correct answer: luis
+2. Question 1: In what country did I study abroad for a year?
+    - Variable name: studyAbroadCountry
+    - Correct answer: south korea
     - How I'll validate and check the answer: 
-        - if (deadBrother && deadBrother.trim() !== "") to validate input
-        - if (deadBrother.toLowerCase() === "luis") to check answer
+        - if (studyAbroadCountry && studyAbroadCountry.trim() !== "") to validate input
+        - if (studyAbroadCountry.toLowerCase() === "south korea") to check answer
 
 3. Use that structure for all four questions.
 
@@ -32,10 +32,10 @@ console.log("=== My Quiz Game ===");
 let score = 0;
 
 // Question 1
-let deadBrother = prompt("What is my dead brother's name?");
+let studyAbroadCountry = prompt("In what country did I study abroad for a year?");
 
-if (deadBrother && deadBrother.trim() !== "") {
-    if (deadBrother.toLowerCase() === "luis") {
+if (studyAbroadCountry && studyAbroadCountry.trim() !== "") {
+    if (studyAbroadCountry.toLowerCase() === "south korea") {
         score++;
     }
 }
@@ -44,10 +44,10 @@ else {
 }
 
 // Question 2
-let numWomen = prompt("How many women did my dad cheat on my mom with before their divorce?");
+let showName = prompt("What popular TV show did I watch all 8 seasons of recently?");
 
-if (numWomen && numWomen.trim() !== "") {
-    if (numWomen === "4") {
+if (showName && showName.trim() !== "") {
+    if (showName.toLowerCase() === "game of thrones") {
         score++;
     }
 }
@@ -56,10 +56,10 @@ else {
 }
 
 // Question 3
-let prisonCity = prompt("In what city is the prison that is holding my stepbrother who tried to murder his parents and brother? (Hint: in Kansas)");
+let parentsHometown = prompt("What city in Mexico are my parents from?");
 
-if (prisonCity && prisonCity.trim() !== "") {
-    if (prisonCity.toLowerCase() === "leavenworth") {
+if (parentsHometown && parentsHometown.trim() !== "") {
+    if (parentsHometown.toLowerCase() === "puebla") {
         score++;
     }
 }
@@ -68,10 +68,10 @@ else {
 }
 
 // Question 4
-let youtuberName = prompt("What former YouTuber does my dad use as an example of successful conversion therapy?");
+let bodyPart = prompt("What body part did I nearly lose when I was 3?");
 
-if (youtuberName && youtuberName.trim() !== "") {
-    if (youtuberName.toLowerCase() === "lohanthony") {
+if (bodyPart && bodyPart.trim() !== "") {
+    if (bodyPart.toLowerCase() === "tongue") {
         score++;
     }
 }
@@ -99,26 +99,24 @@ else {
     alert(`None right? Honestly valid.`);
 }
 
-// Additional feedback with logical operators
-
 // Final summary alert
 alert(`===== Summary =====
 
-Question 1
-Your Answer: ${deadBrother.toLowerCase()}
-Correct Answer: luis
+Q1: In what country did I study abroad for a year?
+Your Answer: ${studyAbroadCountry.toLowerCase()}
+Correct Answer: south korea
 
-Question 2
-Your Answer: ${numWomen}
-Correct Answer: 4
+Q2: What popular TV show did I watch all 8 seasons of recently?
+Your Answer: ${showName.toLowerCase()}
+Correct Answer: game of thrones
 
-Question 3
-Your Answer: ${prisonCity.toLowerCase()}
-Correct Answer: leavenworth
+Q3: What city in Mexico are my parents from?
+Your Answer: ${parentsHometown.toLowerCase()}
+Correct Answer: puebla
 
-Question 4
-Your Answer: ${youtuberName.toLowerCase()}
-Correct Answer: lohanthony
+Q4: What body part did I nearly lose when I was 3?
+Your Answer: ${bodyPart.toLowerCase()}
+Correct Answer: tongue
 
 Accuracy: ${scorePercentage}%
 `);
